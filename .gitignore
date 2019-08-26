@@ -1,0 +1,13 @@
+.DS_Store
+
+# images
+images/
+*.jpeg
+*.jpg
+*.png
+
+node_modules/
+example.js
+
+.env
+.env.test
