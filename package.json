@@ -1,10 +1,17 @@
 {
   "name": "datamosh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Datamosh images",
   "keywords": ["datamost", "mosh", "jpg", "png", "glitch"],
   "author": "Michael Sterpka <michaelsterpka@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mster/datamosh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mster/datamosh/issues"
+  },
   "main": "index.js",
   "scripts": {
     "test": "npm run lint",
