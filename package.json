@@ -1,14 +1,8 @@
 {
   "name": "datamosh",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Datamosh images",
-  "keywords": [
-    "datamost",
-    "mosh",
-    "jpg",
-    "png",
-    "glitch"
-  ],
+  "keywords": ["datamost", "mosh", "jpg", "png", "glitch"],
   "author": "Michael Sterpka <michaelsterpka@gmail.com>",
   "license": "MIT",
   "main": "index.js",
@@ -17,8 +11,7 @@
     "lint": "echo \"Running standard --verbose\n\" && standard --verbose && echo \"Lint passed\n\""
   },
   "dependencies": {
-    "debug": "^4.1.1",
-    "jpeg-js": "^0.3.6"
+    "jimp": "^0.10.1"
   },
   "devDependencies": {
     "standard": "^14.0.2"
