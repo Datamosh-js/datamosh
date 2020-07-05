@@ -1,8 +1,14 @@
 {
   "name": "datamosh",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Datamosh images",
-  "keywords": ["datamost", "mosh", "jpg", "png", "glitch"],
+  "keywords": [
+    "datamost",
+    "mosh",
+    "jpg",
+    "png",
+    "glitch"
+  ],
   "author": "Michael Sterpka <michaelsterpka@gmail.com>",
   "license": "MIT",
   "repository": {
