@@ -37,7 +37,7 @@ To import your mode, you have two options:
 
 - ✓ Next, assure that your code pases `npm test`.
 
-5. If you contribution is more than a single commit, squash all commits into one.
+5. If your contribution is more than a single commit, squash all commits into one.
 6. Open a pull request to `mster:master`.
 
 ## Other Features

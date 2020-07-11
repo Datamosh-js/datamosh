@@ -6,28 +6,28 @@ Mess around with image data using _buffers_, create some interesting & artistic 
 
 ### mosh ( options, cb )
 
-- #### `options`:
+- `options`:
 
-  - #### `read`: `<string>` | `<Buffer>` (Required)
+  - `read`: `<string>` | `<Buffer>` (Required)
 
     May be a string path to original supported image, or the Buffer of said image.
 
     Supported image types: `.jpg, .jpeg, .png, .bmp, .tiff, .gif`.
 
-  - #### `write`: `<string>`
+  - `write`: `<string>`
 
     Path to write the resulting image.
 
     If unspecified, the resulting image data will be returned as a Buffer.
 
-  - #### `mode`: `<string>`
+  - `mode`: `<string>`
 
     The mode to choose when moshing the supplied image. If no mode is specified, it will be chosen at random.
 
     Current modes include:
     `schifty`, `blurbobb`, `veneneux`, `vana`, `fatcat`.
 
-- #### `cb`: `function(error, data)`
+- `cb`: `function(error, data)`
 
   The callback function, as `datamosh` is callback based.
 
