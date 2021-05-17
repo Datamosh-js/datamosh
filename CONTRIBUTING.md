@@ -48,7 +48,7 @@ Follow the [Getting Started](#getting-started) guide if you're new to this.
 
 ## Code Style
 
-Datamosh uses [StandardJS](https://standardjs.com/). To have your contributions accepted, they must also be in StandardJS style.
+Datamosh uses [Prettier](https://prettier.io/). To have your contributions accepted, they must also be in StandardJS style.
 
 To test if your code passes, run the test command:
 `npm run lint`
@@ -57,7 +57,7 @@ To test if your code passes, run the test command:
 
 As of v1.0.0, tests consist of:
 
-- linting using StandardJS
+- linting using Prettier
 
 ## Need Help
 

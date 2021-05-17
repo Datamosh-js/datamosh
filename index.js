@@ -1,1 +1,1 @@
-module.exports = require('./lib/mosh')
+module.exports = require("./lib/mosh");
