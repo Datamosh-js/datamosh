@@ -29,9 +29,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint",
+    "test": "npm run lint && npm run jest",
+    "jest": "jest ./tests",
     "lint": "echo \"Linting with Prettier\n\" && npx prettier --check . && echo \"Lint passed\n\"",
     "lint-fix": "echo \"Auto-fixing with Prettier...\" && npx prettier --write ."
+  },
+  "jest": {
+    "testRegex": "tests/.*.test.js$"
   },
   "dependencies": {
     "file-type": "^16.5.0",
@@ -39,6 +43,7 @@
     "image-encode": "^1.3.1"
   },
   "devDependencies": {
+    "jest": "^27.0.4",
     "prettier": "^2.3.0"
   }
 }
