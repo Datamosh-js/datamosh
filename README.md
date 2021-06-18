@@ -1,6 +1,6 @@
 # Datamosh [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/licenses/MIT) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Build Status](https://travis-ci.com/mster/datamosh.svg?branch=master)](https://travis-ci.com/mster/datamosh)
 
-![datamosh_cover_2x](https://user-images.githubusercontent.com/15038724/118436128-12662b00-b695-11eb-8b9e-f4d91a869adf.png)
+![datamosh_cover_2x](https://user-images.githubusercontent.com/15038724/122327314-838e3d80-cee2-11eb-89d8-e315556797ba.png)
 
 Mess around with image data using _buffers_, create some interesting & artistic results, **profit**.
 
@@ -12,40 +12,54 @@ $ npm install datamosh
 
 # Usage
 
-Using callbacks
-
 ```js
 const mosh = require("datamosh");
 
-const opts = {
-  read: "path/to/file/in.ext",
-  mode: "fatcat",
-};
+let imgBuff = await readFile("/full/path/to/image.png");
 
-const cb = (err, moshedBuffer) => {
-  if (!err) writeFile("path/to/file/out.ext", moshedBuffer);
-};
-
-mosh(opts, cb);
+let moshedBuff = await mosh(imgBuff, "vaporwave");
 ```
 
-Using async/await
+Reading/Writing the moshed image
 
 ```js
-const { promisify } = require("util");
+mosh("~/image.png", null, "~/moshed_image.png");
 
-const promisifiedMosh = promisify(mosh);
+// because mode is null, a random mode will be chosen
+```
 
-const imgBuffer = await promisifiedMosh(opts);
+Moshing a buffer with callbacks
+
+```js
+const cb = (err, data) => {
+  if (!err) writeFile("/path/to/out.gif", data);
+};
+
+mosh(imgBuff, "vana", cb);
 ```
 
 Using multiple modes on a single image, applied with respect to order.
 
 ```js
-const opts = {
-  read: "path/to/file/in.ext",
-  mode: ["vaporwave", "fatcat", "vana"],
-};
+let moshedBuff = await mosh(imgBuff, ["fatcat", "vaporwave", "walter"]);
+
+// ['vana', null, null] is also valid => ['vana', random, random]
+```
+
+# API
+
+### `mosh(source, mode?, cb|writePath?)`
+
+Takes input `source` Buffer/Path, returns an encoded Buffer with the applied modes.
+
+- `mode`, the mosh mode to apply to the source image. Multiple modes may be passed using an array of modes. Any `null` values are replaced with a random mode.
+- `cb (err, data)`, when using callbacks.
+- `writePath`, the path to write the moshed image to.
+
+Paths may use the tilde (~) character. Datamosh validates read and write paths, replacing tilde with the path to the home directory.
+
+```
+~/Desktop/moshes/ -> /home/youruser/Desktop/moshes
 ```
 
 # Custom Modes
@@ -57,16 +71,13 @@ For mosh function starter code, see the included template file located [here](ht
 ```js
 const datamosh = require("datamosh");
 
-function myNewMode(image) {
-  const bitmap = image.bitmap.data;
-  // your cool code goes here
+function newMode(data, width, height) {
+  // your cool code goes here!
 
-  image.bitmap.data = bitmap;
-
-  return image;
+  return data;
 }
 
-datamosh.MODES.myNewMode = myNewMode;
+datamosh.MODES.newMode = newMode;
 ```
 
 ## Example Images

@@ -1,12 +1,18 @@
 {
   "name": "datamosh",
-  "version": "1.4.5",
-  "description": "Datamosh images",
+  "version": "2.0.0",
+  "description": "Edit images via buffers.",
   "keywords": [
-    "datamost",
+    "datamosh",
     "mosh",
     "jpg",
     "png",
+    "tiff",
+    "bmp",
+    "gif",
+    "edit",
+    "image",
+    "buffer",
     "glitch"
   ],
   "author": "Michael Sterpka <michaelsterpka@gmail.com>",
@@ -28,7 +34,9 @@
     "lint-fix": "echo \"Auto-fixing with Prettier...\" && npx prettier --write ."
   },
   "dependencies": {
-    "jimp": "^0.10.1"
+    "file-type": "^16.5.0",
+    "image-decode": "^1.2.2",
+    "image-encode": "^1.3.1"
   },
   "devDependencies": {
     "prettier": "^2.3.0"
