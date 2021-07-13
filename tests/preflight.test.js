@@ -60,7 +60,7 @@ describe("Preflight source checks should", () => {
 
     expect(enoent.constructor).toBe(Error);
     expect(enoent.message).toBe(
-      `Invalid source path: ${path}\n\tFile does not exist.`
+      `Invalid source path: ${path}\nFile does not exist.`
     );
   });
 });
@@ -119,7 +119,7 @@ describe("Preflight write checks should", () => {
 
     expect(badWrite.constructor).toBe(Error);
     expect(badWrite.message).toBe(
-      `Invalid source path: ${path}\n\tFile does not exist.`
+      `Invalid source path: ${path}\nFile does not exist.`
     );
   });
 });
