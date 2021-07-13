@@ -1,6 +1,6 @@
 {
   "name": "datamosh",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Edit images via buffers.",
   "keywords": [
     "datamosh",
@@ -15,6 +15,9 @@
     "buffer",
     "glitch"
   ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "author": "Michael Sterpka <michaelsterpka@gmail.com>",
   "contributors": [
     "Tyler Laskey <tlaskey3@gmail.com> (https://github.com/tlaskey)"
