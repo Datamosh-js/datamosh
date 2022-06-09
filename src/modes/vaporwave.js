@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 
 module.exports = function (data) {
   const COLORS = [
     [0, 184, 255],
     [255, 0, 193],
     [150, 0, 255],
-    [0, 255, 249],
+    [0, 255, 249]
   ];
 
   for (let i = 0; i < data.length; i += 4) {

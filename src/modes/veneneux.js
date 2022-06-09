@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function (data, width, height) {
   const rand = Math.random;

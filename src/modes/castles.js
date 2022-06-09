@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function (data) {
   const red = new Array(data.length / 4),

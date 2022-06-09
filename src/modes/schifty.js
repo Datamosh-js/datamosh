@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function (data) {
   let size = Math.random() * 1024 * 4;
