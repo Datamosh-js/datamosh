@@ -16,6 +16,7 @@
         "dist"
     ],
     "files": [
+        "src/index.ts",
         "src/mosh.ts",
         "src/types.ts",
         "src/utils.ts",

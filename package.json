@@ -2,7 +2,7 @@
   "name": "datamosh",
   "version": "3.0.0-alpha",
   "description": "Edit images via buffers.",
-  "main": "dist/mosh.js",
+  "main": "dist/index.js",
   "types": "dist/mosh.d.ts",
   "files": [
     "dist"

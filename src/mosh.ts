@@ -8,7 +8,7 @@ import supportExtensions from './exts.json';
 import { isArray, isFunction, isString } from './types';
 import { loadFromPath, writeToPath } from './utils';
 
-class Datamosh {
+export default class Datamosh {
   constructor() {
     this.use({
       blurbobb: require('./modes/blurbobb'),
@@ -118,5 +118,3 @@ class Datamosh {
     });
   }
 }
-
-module.exports = Datamosh.Instance;
