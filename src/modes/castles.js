@@ -23,5 +23,5 @@ module.exports = function (data) {
     ret.push(a[i]);
   }
 
-  return ret;
+  return { data: ret };
 };

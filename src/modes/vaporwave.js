@@ -64,5 +64,5 @@ module.exports = function (data) {
     }
   }
 
-  return data;
+  return { data };
 };

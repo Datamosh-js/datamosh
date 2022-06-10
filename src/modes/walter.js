@@ -24,5 +24,5 @@ module.exports = function (data) {
       data[1 + 2] = hurp[2] - lurp[2] + bP * multi;
   }
 
-  return data;
+  return { data };
 };

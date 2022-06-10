@@ -17,5 +17,5 @@ module.exports = function (data) {
   }
 
   data = Buffer.concat(storage);
-  return data;
+  return { data };
 };

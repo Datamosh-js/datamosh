@@ -9,5 +9,5 @@ module.exports = function (data) {
     if (counter > 128) counter = Math.random() * 128;
   }
 
-  return data;
+  return { data };
 };

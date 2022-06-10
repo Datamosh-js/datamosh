@@ -37,5 +37,5 @@ module.exports = function (data, width, height) {
     pixel++;
   }
 
-  return data;
+  return { data };
 };

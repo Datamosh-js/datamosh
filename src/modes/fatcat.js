@@ -29,5 +29,5 @@ module.exports = function (data) {
     data[i + 2] = min(data[i + 2] * 1.4, 255);
   }
 
-  return data;
+  return { data };
 };

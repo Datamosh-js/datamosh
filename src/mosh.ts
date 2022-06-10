@@ -9,7 +9,28 @@ import { isArray, isFunction, isString } from './types';
 import { loadFromPath, writeToPath } from './utils';
 
 class Datamosh {
+  constructor() {
+    this.use({
+      blurbobb: require('./modes/blurbobb'),
+      castles: require('./modes/castles'),
+      fatcat: require('./modes/fatcat'),
+      schifty: require('./modes/schifty'),
+      vana: require('./modes/vana'),
+      vaporwave: require('./modes/vaporwave'),
+      veneneux: require('./modes/veneneux'),
+      walter: require('./modes/walter')
+    });
+  }
+
   private modes = {};
+  static instance: Datamosh;
+
+  public static get Instance(): Datamosh {
+    if (!Datamosh.instance) {
+      Datamosh.instance = new Datamosh();
+    }
+    return Datamosh.instance;
+  }
 
   /* overloads */
   public async mosh(source: string, modes?: string): Promise<Buffer>;
@@ -24,7 +45,13 @@ class Datamosh {
   public async mosh(source: Buffer, modes?: string, ret?: Function): Promise<void>;
   public async mosh(source: Buffer, modes?: Array<string>, ret?: string): Promise<void>;
   public async mosh(source: Buffer, modes?: Array<string>, ret?: Function): Promise<void>;
-  /* implementation */
+
+  /**
+   * Apply modes on an image
+   * @param source Source image as a file path or image Buffer
+   * @param modes Single mode, or array of modes
+   * @param ret Callback or write path
+   */
   public async mosh(
     source: string | Buffer,
     modes?: string | Array<string>,
@@ -64,6 +91,7 @@ class Datamosh {
 
     const encoded = encode(_data, [_width, _height], _ext);
 
+    // follow (err, res) cb style
     if (!_ret) return encoded;
     _ret(encoded);
   }
@@ -78,6 +106,10 @@ class Datamosh {
       throw new Error(`unable to use modes: ${badModes.join(', ')}`);
   }
 
+  public getModes(): Object {
+    return this.modes;
+  }
+
   private randomModes(): Array<string> {
     const choices: number = Math.ceil(Math.random() * 5 + 10e-6);
     return Array(choices).map(() => {
@@ -87,4 +119,4 @@ class Datamosh {
   }
 }
 
-export default new Datamosh();
+module.exports = Datamosh.Instance;
