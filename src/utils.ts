@@ -1,3 +1,5 @@
+'use strict';
+
 import { stat, readFile, writeFile } from 'fs/promises';
 import { homedir } from 'os';
 
@@ -13,10 +15,10 @@ function writeToPath(path: string, data: Buffer) {
 }
 
 function replaceTilde(path: string) {
-  if (path.startsWith('~')) {
+  if (path?.startsWith('~')) {
     return path.replace('~', homedir());
   }
   return path;
 }
 
-export { loadFromPath, writeToPath };
+export { loadFromPath, writeToPath, replaceTilde };

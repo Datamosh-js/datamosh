@@ -10,7 +10,7 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "author": "Michael Sterpka <michaelsterpka@gmail.com>",
+  "author": "Michael Sterpka <michaelsterpka@gmail.com> (https://github.com/mster)",
   "contributors": [
     "Tyler Laskey <tlaskey3@gmail.com> (https://github.com/tlaskey)"
   ],
@@ -23,15 +23,14 @@
     "url": "https://github.com/mster/datamosh/issues"
   },
   "scripts": {
-    "test": "npm run lint && npm run jest",
+    "pretest": "npm run lint",
+    "test": "npm run jest",
+    "posttest": "rm tests/fixtures/deleteme.png",
     "jest": "jest ./tests",
     "lint": "npx prettier src --write",
     "clean": "rm -rf dist/",
     "build": "npm run lint && npx tsc",
     "prepack": "npm run clean && npm run build"
-  },
-  "jest": {
-    "testRegex": "tests/.*.test.js$"
   },
   "dependencies": {
     "file-type": "^16.5.0",
@@ -39,10 +38,12 @@
     "image-encode": "^1.3.1"
   },
   "devDependencies": {
+    "@types/jest": "^28.1.3",
     "@types/node": "^17.0.41",
-    "jest": "^27.0.4",
+    "jest": "^28.1.1",
     "prettier": "^2.3.0",
-    "typescript": "^4.7.3"
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
   },
   "keywords": [
     "datamosh",
