@@ -1,7 +1,7 @@
 .DS_Store
 
 node_modules/
-example.js
+dist/
 
 .env
 .env.test

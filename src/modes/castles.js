@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function (data) {
   const red = new Array(data.length / 4),
@@ -23,5 +23,5 @@ module.exports = function (data) {
     ret.push(a[i]);
   }
 
-  return ret;
+  return { data: ret };
 };

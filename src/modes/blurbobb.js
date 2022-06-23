@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function (data) {
   let counter = 0;
@@ -9,5 +9,5 @@ module.exports = function (data) {
     if (counter > 128) counter = Math.random() * 128;
   }
 
-  return data;
+  return { data };
 };

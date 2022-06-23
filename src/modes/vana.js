@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function (data) {
   const rand = Math.random;
@@ -28,5 +28,5 @@ module.exports = function (data) {
     data[i + 2] = min(data[i + 2] * seed[2] + 100 * seed[1], 255);
   }
 
-  return data;
+  return { data };
 };

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function (data) {
   const f = Math.floor,
@@ -17,13 +17,12 @@ module.exports = function (data) {
       gP = data[i + 1] / 255,
       bP = data[i + 2] / 255;
 
-    if (data[i] < lurp[0] || data[i] > hurp[0])
-      data[i] = hurp[0] - lurp[0] + rP * multi;
+    if (data[i] < lurp[0] || data[i] > hurp[0]) data[i] = hurp[0] - lurp[0] + rP * multi;
     if (data[i + 1] < lurp[1] || data[i + 1] > hurp[1])
       data[i + 1] = hurp[1] - lurp[1] + gP * multi;
     if (data[i + 2] < lurp[2] || data[i + 2] > hurp[2])
       data[1 + 2] = hurp[2] - lurp[2] + bP * multi;
   }
 
-  return data;
+  return { data };
 };

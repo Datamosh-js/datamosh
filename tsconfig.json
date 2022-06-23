@@ -1,0 +1,32 @@
+{
+    "strict": true,
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "declaration": true,
+        "outDir": "dist",
+        "sourceMap": true,
+        "allowJs": true
+    },
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts",
+        "dist"
+    ],
+    "files": [
+        "src/index.ts",
+        "src/mosh.ts",
+        "src/types.ts",
+        "src/utils.ts",
+        "src/modes/blurbobb.js",
+        "src/modes/castles.js",
+        "src/modes/fatcat.js",
+        "src/modes/schifty.js",
+        "src/modes/vana.js",
+        "src/modes/vaporwave.js",
+        "src/modes/veneneux.js",
+        "src/modes/walter.js",
+    ]
+}

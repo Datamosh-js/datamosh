@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 module.exports = function (data) {
   let size = Math.random() * 1024 * 4;
@@ -17,5 +17,5 @@ module.exports = function (data) {
   }
 
   data = Buffer.concat(storage);
-  return data;
+  return { data };
 };
