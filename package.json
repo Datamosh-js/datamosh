@@ -1,6 +1,6 @@
 {
   "name": "datamosh",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "Edit images via buffers.",
   "keywords": [
     "datamosh",
@@ -20,7 +20,8 @@
   },
   "author": "Michael Sterpka <michaelsterpka@gmail.com>",
   "contributors": [
-    "Tyler Laskey <tlaskey3@gmail.com> (https://github.com/tlaskey)"
+    "Tyler Laskey <tlaskey3@gmail.com> (https://github.com/tlaskey)",
+    "BonjourInternet (https://github.com/BjrInt)"
   ],
   "license": "MIT",
   "repository": {
