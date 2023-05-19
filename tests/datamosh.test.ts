@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 /* core */
 import { readFile } from 'fs/promises'
@@ -13,7 +13,7 @@ jest.mock('file-type')
 import datamosh from '../lib/datamosh'
 
 const IMAGE_FIXTURE_PATHS = {
-    rgb: 'tests/fixtures/rgb.png'
+    rgb: 'tests/fixtures/rgb.png',
 }
 
 describe('datamosh', () => {
@@ -36,7 +36,7 @@ describe('datamosh', () => {
         expect.assertions(1)
 
         const src: Buffer = Buffer.alloc(64, 1)
-        const mode: String = "foobar"
+        const mode: String = 'foobar'
         const args: any = { src, mode }
 
         expect(async () => {
@@ -60,7 +60,7 @@ describe('datamosh', () => {
         expect.assertions(1)
 
         const src: Buffer = Buffer.alloc(64, 1)
-        const mode: String = "foobar"
+        const mode: String = 'foobar'
         const args: any = { src, mode }
 
         await datamosh(args)

@@ -32,9 +32,7 @@ async function datamosh({ src, mode = 'random', modes }: MoshArguments) {
         modes &&
         modes.filter((m) => supportedModes.includes(m)).length === modes.length
     ) {
-        modes.forEach(
-            (mode) => moshedImg = supportedModes[mode](moshedImg)
-        )
+        modes.forEach((mode) => (moshedImg = supportedModes[mode](moshedImg)))
     }
 
     // encode image

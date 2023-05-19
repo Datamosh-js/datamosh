@@ -1,9 +1,9 @@
 import { readFile } from 'fs/promises'
-import datamosh from './lib/datamosh';
+import datamosh from '.'
 
-const sampleImagePath: string = './tests/fixtures/rgb.png';
+const sampleImagePath: string = './tests/fixtures/rgb.png'
 
-(async () => {
+;(async () => {
     const src = await readFile(sampleImagePath)
     const result = await datamosh({ src })
-})();
+})()

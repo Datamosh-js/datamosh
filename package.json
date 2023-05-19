@@ -6,8 +6,9 @@
         "test": "npm run lint && npm run jest",
         "jest": "jest ./tests",
         "lint": "echo \"Linting with Prettier\n\" && npx prettier --check . && echo \"Lint passed\n\"",
-        "lint-fix": "echo \"Auto-fixing with Prettier...\" && npx prettier --write .",
-        "tsc": "tsc -w lib/*.ts",
+        "lint:fix": "echo \"Auto-fixing with Prettier...\" && npx prettier --write .",
+        "tsc:build": "tsc lib/*.ts --outDir ./dist",
+        "tsc:w": "tsc lib/*.ts -w",
         "clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm i"
     },
     "engines": {
@@ -39,7 +40,8 @@
     "bugs": {
         "url": "https://github.com/mster/datamosh/issues"
     },
-    "main": "index.js",
+    "main": "dist/index.js",
+    "types": "lib/index.d.ts",
     "dependencies": {
         "file-type": "^16.5.0",
         "image-decode": "^1.2.2",
