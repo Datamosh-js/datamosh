@@ -12,9 +12,9 @@ Your mosh mode doesn't have to do anything specific -- if you think it's cool, w
 
 Most of Datamosh's current modes overwrite existing Red/Green/Blue (RGB) pixel values with something random. If you get stuck or just need some inspiration, check out these examples.
 
-- [Vana mode](https://github.com/mster/datamosh/blob/master/lib/modes/vana.js)
-- [Schifty mode](https://github.com/mster/datamosh/blob/master/lib/modes/schifty.js)
-- [Before and after images](https://github.com/mster/datamosh#example-images)
+-   [Vana mode](https://github.com/mster/datamosh/blob/master/lib/modes/vana.js)
+-   [Schifty mode](https://github.com/mster/datamosh/blob/master/lib/modes/schifty.js)
+-   [Before and after images](https://github.com/mster/datamosh#example-images)
 
 Once you have a stub function and some cool name for it, you'll want to import it into Datamosh.
 
@@ -28,14 +28,14 @@ To import your mode, you have two options:
 1. Fork datamosh and run `npm install` within the directory.
 2. On your fork, create a new branch named `username/work-description`, where `username` is your GitHub username and `work-description` is a short description for your contribution.
 
-   For example: `mster/new-mode`
+    For example: `mster/new-mode`
 
 3. Commit your work to the branch you created.
 4. When you're ready for review or to submit your contribution, double check a few things.
 
-- ✓ First, make sure your fork is up to date. If your fork is out of date, you will need to rebase.
+-   ✓ First, make sure your fork is up to date. If your fork is out of date, you will need to rebase.
 
-- ✓ Next, assure that your code pases `npm test`.
+-   ✓ Next, assure that your code pases `npm test`.
 
 5. If your contribution is more than a single commit, squash all commits into one.
 6. Open a pull request to `mster:master`.
@@ -57,7 +57,7 @@ To test if your code passes, run the test command:
 
 As of v1.0.0, tests consist of:
 
-- linting using Prettier
+-   linting using Prettier
 
 ## Need Help
 
