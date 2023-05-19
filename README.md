@@ -13,17 +13,17 @@ $ npm install datamosh
 # Usage
 
 ```js
-const mosh = require("datamosh");
+const mosh = require('datamosh')
 
-let imgBuff = await readFile("/full/path/to/image.png");
+let imgBuff = await readFile('/full/path/to/image.png')
 
-let moshedBuff = await mosh(imgBuff, "vaporwave");
+let moshedBuff = await mosh(imgBuff, 'vaporwave')
 ```
 
 Reading/Writing the moshed image
 
 ```js
-mosh("~/image.png", null, "~/moshed_image.png");
+mosh('~/image.png', null, '~/moshed_image.png')
 
 // because mode is null, a random mode will be chosen
 ```
@@ -32,16 +32,16 @@ Moshing a buffer with callbacks
 
 ```js
 const cb = (err, data) => {
-  if (!err) writeFile("/path/to/out.gif", data);
-};
+    if (!err) writeFile('/path/to/out.gif', data)
+}
 
-mosh(imgBuff, "vana", cb);
+mosh(imgBuff, 'vana', cb)
 ```
 
 Using multiple modes on a single image, applied with respect to order.
 
 ```js
-let moshedBuff = await mosh(imgBuff, ["fatcat", "vaporwave", "walter"]);
+let moshedBuff = await mosh(imgBuff, ['fatcat', 'vaporwave', 'walter'])
 
 // ['vana', null, null] is also valid => ['vana', random, random]
 ```
@@ -52,9 +52,9 @@ let moshedBuff = await mosh(imgBuff, ["fatcat", "vaporwave", "walter"]);
 
 Takes input `source` Buffer/Path, returns an encoded Buffer with the applied modes.
 
-- `mode`, the mosh mode to apply to the source image. Multiple modes may be passed using an array of modes. Any `null` values are replaced with a random mode.
-- `cb (err, data)`, when using callbacks.
-- `writePath`, the path to write the moshed image to.
+-   `mode`, the mosh mode to apply to the source image. Multiple modes may be passed using an array of modes. Any `null` values are replaced with a random mode.
+-   `cb (err, data)`, when using callbacks.
+-   `writePath`, the path to write the moshed image to.
 
 Paths may use the tilde (~) character. Datamosh validates read and write paths, replacing tilde with the path to the home directory.
 
@@ -69,15 +69,15 @@ Datamosh allows you to set custom moshing modes. As of `v1.1.0`, this may be aco
 For mosh function starter code, see the included template file located [here](https://github.com/mster/datamosh/blob/master/lib/modes/template).
 
 ```js
-const datamosh = require("datamosh");
+const datamosh = require('datamosh')
 
 function newMode(data, width, height) {
-  // your cool code goes here!
+    // your cool code goes here!
 
-  return data;
+    return data
 }
 
-datamosh.MODES.newMode = newMode;
+datamosh.MODES.newMode = newMode
 ```
 
 ## Example Images
@@ -96,4 +96,4 @@ Vaporwave was created by user [@tlaskey](https://github.com/tlaskey)
 
 Check out this list of awesome apps that use `datamosh`!
 
-- [JanMichaelBot](https://github.com/tlaskey/JanMichaelBot) by user [@Tlaskey](https://github.com/tlaskey)
+-   [JanMichaelBot](https://github.com/tlaskey/JanMichaelBot) by user [@Tlaskey](https://github.com/tlaskey)

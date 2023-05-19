@@ -1,0 +1,8 @@
+{
+  "bail": 1,
+  "verbose": true,
+  "preset": "ts-jest",
+  "testMatch": [
+    "**/tests/**/*.test.ts"
+  ]
+}
